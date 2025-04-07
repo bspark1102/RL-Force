@@ -6,7 +6,9 @@ This repository contains code and resources related to the paper "Performance, R
 ## Structure
 The repository consists of Python and MATLAB scripts, EnergyPlus input files, and utility functions necessary to replicate and extend experiments detailed in the associated research paper.
 
-### Key Components:
+### Necessary Files
+
+The following files are essential for running the simulations:
 
 - **Policy Gradient Agents:**
   - `policygradient_tf3.py`: Base policy gradient agent.
@@ -34,6 +36,8 @@ The repository consists of Python and MATLAB scripts, EnergyPlus input files, an
 - **EnergyPlus Models:**
   - `.idf` files define simulation models used by EnergyPlus (`031721_Single_NoSunspace...`, `070121j_Single_NoSunspace...`).
 
+Files not listed above can be considered leftovers and are not essential for replicating the experiments.
+
 ## Requirements
 
 - **Python Libraries:**
@@ -51,7 +55,7 @@ The repository consists of Python and MATLAB scripts, EnergyPlus input files, an
 
 ## Installation
 
-Ensure you have Python and Jupyter Notebook installed. Using Anaconda is recommended for windows.
+Ensure you have Python and Jupyter Notebook installed. Using Anaconda is recommended for Windows.
 
 Additional Python dependencies can be installed using:
 
@@ -72,7 +76,7 @@ pip install tensorflow numpy
 **Important:** The Jupyter Notebook must run first, as it sets up and waits for TCP/IP connections initiated by MATLAB.
 
 ## Notes
-- The data used to train the pretrained models located in folders `NN_PaperPretrain_i_V101_TE3` and `NN_PaperPretrain_v_V101_TE3` are not included. 
+- The data used to train the pretrained models located in folders `NN_PaperPretrain_i_V101_TE3` and `NN_PaperPretrain_v_V101_TE3` are not included.
 
 ## Citation
 If you use this code or methodology in your research, please cite our paper:
@@ -92,4 +96,3 @@ author = {Bumsoo Park and Alexandra R. Rempel and Sandipan Mishra},
 
 ## Contact
 For any questions or suggestions, please open an issue in this repository or contact the authors (bspark1102@gmail.com) directly.
-
