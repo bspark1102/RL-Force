@@ -1,6 +1,0 @@
-model_checkpoint_path: "NN_PaperPretrain_i_V101_TE3_800"
-all_model_checkpoint_paths: "NN_PaperPretrain_i_V101_TE3_400"
-all_model_checkpoint_paths: "NN_PaperPretrain_i_V101_TE3_500"
-all_model_checkpoint_paths: "NN_PaperPretrain_i_V101_TE3_600"
-all_model_checkpoint_paths: "NN_PaperPretrain_i_V101_TE3_700"
-all_model_checkpoint_paths: "NN_PaperPretrain_i_V101_TE3_800"
