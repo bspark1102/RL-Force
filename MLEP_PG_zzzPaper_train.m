@@ -15,7 +15,7 @@ ep.idfFile =('070121j_Single_NoSunspace_Rooftop_IdealLoadsAir_South_ONEZONE_MLEP
 ep.epwFile=('USA_NY_Albany.Intl.AP.725180_TMYx.2004-2018');
 
 
-% get forecast information (according to city)
+% get forecast information (according to city) % Not used in current version 
 load('OT_save_15_may_alb.mat');
 forecast = o_hist;
 
