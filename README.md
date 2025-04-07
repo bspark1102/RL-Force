@@ -11,7 +11,6 @@ The repository consists of Python and MATLAB scripts, EnergyPlus input files, an
 The following files are essential for running the simulations:
 
 - **Policy Gradient Agents:**
-  - `policygradient_tf3.py`: Base policy gradient agent.
   - `policygradient_tf3_dualI.py` & `policygradient_tf3_dualV.py`: Specialized dual agents for insulation and ventilation respectively.
 
 - **Neural Network Models:**
@@ -33,7 +32,11 @@ The following files are essential for running the simulations:
   - `act7_select6_scratch_V1.m`, `act7_select6_sim.m`: Convert action indices into schedules for EnergyPlus.
 
 - **EnergyPlus Models:**
-  - `.idf` files define simulation models used by EnergyPlus (`031721_Single_NoSunspace...`, `070121j_Single_NoSunspace...`).
+  - `.idf` files define simulation models used by EnergyPlus (`070121j_Single_NoSunspace...`).
+  - 
+- **Weather Files:**
+  - `.epw` files define the weather files used by EnergyPlus (`USA_NY_Albany.Intl....`).
+
 
 Files not listed above can be considered leftovers and are not essential for replicating the experiments.
 
