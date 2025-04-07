@@ -11,40 +11,40 @@ The repository consists of Python and MATLAB scripts, EnergyPlus input files, an
 The following files are essential for running the simulations:
 
 - **Policy Gradient Agents:**
+  - These files are under the folder './Python_utils'. Make sure they are under the same directory as 'Main_Python.ipynb' when runnning.
   - `policygradient_tf3_dualI.py` & `policygradient_tf3_dualV.py`: Specialized dual agents for insulation and ventilation respectively.
 
-- **Neural Network Models:**
-  - `BP_NN_multi2.py`: Neural network definitions and training methods.
-
 - **MATLAB Simulation Interface:**
-  - `MLEP_PG_train_main.m`: MATLAB-EnergyPlus co-simulation setup.
+  - `Main_Matlab.m`: MATLAB-EnergyPlus co-simulation setup.
 
 - **Main Python Script:**
-  - `PGpretrain_Paper_furthertrainTE3.ipynb`: Main Jupyter notebook for initializing and training reinforcement learning agents.
+  - `Main_Python.ipynb`: Main Jupyter notebook for initializing and training reinforcement learning agents.
 
 - **Utilities:**
-  - `pushBack.m`, `setprod.m`: MATLAB helper functions for data manipulation.
-  - `normalizer.m`, `normalizerV2.m`: Data normalization functions.
+  - These files are under the folder './Matlab_utils'. Make sure they are under the same directory as 'Main_Matlab' when runnning.
+  - `pushBack.m`: MATLAB helper functions for data manipulation.
+  - `normalizer.m`: Data normalization functions.
+  - `get_reward.m`: Data normalization functions.
+  - `select_action.m`: Function to .
 
-- **Reward and Action Functions:**
-  - `new_reward_hvac4_action.m`: Custom reward calculation based on energy consumption.
-  - `action_decouple.m`, `act2bin8.m`, `act2bin_decoupled_ins.m`, `act2bin_decoupled_ven.m`: Functions for translating action indices to actionable control signals.
-  - `act7_select6_scratch_V1.m`, `act7_select6_sim.m`: Convert action indices into schedules for EnergyPlus.
-
-- **EnergyPlus Models:**
+- **EnergyPlus Models and Weather Files:**
+  - These files are under the folder './Weather_and_IDF_files'. Make sure they are under the same directory as 'Main_Matlab' when runnning.
   - `.idf` files define simulation models used by EnergyPlus (`070121j_Single_NoSunspace...`).
-  - 
-- **Weather Files:**
   - `.epw` files define the weather files used by EnergyPlus (`USA_NY_Albany.Intl....`).
 
-
-Files not listed above can be considered leftovers and are not essential for replicating the experiments.
+- **Note**
+  - The example provided here is designed for further training of the pretrained networks, through reinforcement learning.
 
 ## Requirements
 
 - **Python Libraries:**
-  - TensorFlow
+  - TensorFlow (1.4)
   - NumPy
+  - SciPy
+  - os
+  - random
+  - socket
+  - shutil
   - Jupyter Notebook
   - Python 3.x
 
@@ -62,7 +62,7 @@ Ensure you have Python and Jupyter Notebook installed. Using Anaconda is recomme
 Additional Python dependencies can be installed using:
 
 ```bash
-pip install tensorflow numpy
+pip install tensorflow numpy ...
 ```
 
 ## Usage
@@ -70,15 +70,12 @@ pip install tensorflow numpy
 ### Step-by-Step Execution:
 1. **Run the Jupyter Notebook first** (`PGpretrain_Paper_furthertrainTE3.ipynb`) to initialize and train the policy gradient reinforcement learning agents, which will await MATLAB to connect via TCP/IP.
 
-2. **Then run MATLAB scripts** to start the co-simulation and connect to the Python scripts through the TCP/IP port:
-   ```matlab
-   run('MLEP_PG_zzzPaper_train.m')
-   ```
+2. **Then run MATLAB scripts** to start the co-simulation and connect to the Python scripts through the TCP/IP port.
 
 **Important:** The Jupyter Notebook must run first, as it sets up and waits for TCP/IP connections initiated by MATLAB.
 
 ## Notes
-- The data used to train the pretrained models located in folders `NN_PaperPretrain_i_V101_TE3` and `NN_PaperPretrain_v_V101_TE3` are not included.
+- The data used to train the pretrained models located in folders `NN_PaperPretrain_i_V101_TE3` and `NN_PaperPretrain_v_V101_TE3` are not included. If you would like to train your own pretrained model, please contact me directly (bspark1102@gmail.com).
 
 ## Citation
 If you use this code or methodology in your research, please cite our paper:
@@ -97,4 +94,4 @@ author = {Bumsoo Park and Alexandra R. Rempel and Sandipan Mishra},
 ```
 
 ## Contact
-For any questions or suggestions, please open an issue in this repository or contact the authors (bspark1102@gmail.com) directly.
+For any questions or suggestions, please open an issue in this repository or contact me (bspark1102@gmail.com) directly.
