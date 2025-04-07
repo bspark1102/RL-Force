@@ -33,7 +33,7 @@ The following files are essential for running the simulations:
   - `.epw` files define the weather files used by EnergyPlus (`USA_NY_Albany.Intl....`).
 
 - **Note**
-  - The example provided here is designed for further training of the pretrained networks, through reinforcement learning.
+  - The example provided here is designed for _further training_ of the pretrained networks, through reinforcement learning.
 
 ## Requirements
 
