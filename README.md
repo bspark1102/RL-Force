@@ -11,7 +11,7 @@ The repository consists of Python and MATLAB scripts, EnergyPlus input files, an
 The following files are essential for running the simulations:
 
 - **Policy Gradient Agents:**
-  - These files are under the folder './Python_utils'. Make sure they are under the same directory as 'Main_Python.ipynb' when runnning.
+  - These files are under the folder './Python_utils'. Make sure they are under the same directory as `Main_Python.ipynb` when runnning.
   - `policygradient_tf3_dualI.py` & `policygradient_tf3_dualV.py`: Specialized dual agents for insulation and ventilation respectively.
 
 - **MATLAB Simulation Interface:**
@@ -21,14 +21,14 @@ The following files are essential for running the simulations:
   - `Main_Python.ipynb`: Main Jupyter notebook for initializing and training reinforcement learning agents.
 
 - **Utilities:**
-  - These files are under the folder './Matlab_utils'. Make sure they are under the same directory as 'Main_Matlab' when runnning.
+  - These files are under the folder './Matlab_utils'. Make sure they are under the same directory as `Main_Matlab.m` when runnning.
   - `pushBack.m`: MATLAB helper functions for data manipulation.
   - `normalizer.m`: Data normalization functions.
   - `get_reward.m`: Data normalization functions.
   - `select_action.m`: Function to .
 
 - **EnergyPlus Models and Weather Files:**
-  - These files are under the folder './Weather_and_IDF_files'. Make sure they are under the same directory as 'Main_Matlab' when runnning.
+  - These files are under the folder './Weather_and_IDF_files'. Make sure they are under the same directory as `Main_Matlab.m` when runnning.
   - `.idf` files define simulation models used by EnergyPlus (`070121j_Single_NoSunspace...`).
   - `.epw` files define the weather files used by EnergyPlus (`USA_NY_Albany.Intl....`).
 
@@ -70,7 +70,7 @@ pip install tensorflow numpy ...
 ### Step-by-Step Execution:
 1. **Run the Jupyter Notebook first** (`Main_Python.ipynb`) to initialize and train the policy gradient reinforcement learning agents, which will await MATLAB to connect via TCP/IP.
 
-2. **Then run MATLAB scripts** ('Main_Matlab.m') to start the co-simulation and connect to the Python scripts through the TCP/IP port.
+2. **Then run MATLAB scripts** (`Main_Matlab.m`) to start the co-simulation and connect to the Python scripts through the TCP/IP port.
 
 **Important:** The Jupyter Notebook must run first, as it sets up and waits for TCP/IP connections initiated by MATLAB.
 
