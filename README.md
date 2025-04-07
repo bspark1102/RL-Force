@@ -68,9 +68,9 @@ pip install tensorflow numpy ...
 ## Usage
 
 ### Step-by-Step Execution:
-1. **Run the Jupyter Notebook first** (`PGpretrain_Paper_furthertrainTE3.ipynb`) to initialize and train the policy gradient reinforcement learning agents, which will await MATLAB to connect via TCP/IP.
+1. **Run the Jupyter Notebook first** (`Main_Python.ipynb`) to initialize and train the policy gradient reinforcement learning agents, which will await MATLAB to connect via TCP/IP.
 
-2. **Then run MATLAB scripts** to start the co-simulation and connect to the Python scripts through the TCP/IP port.
+2. **Then run MATLAB scripts** ('Main_Matlab.m') to start the co-simulation and connect to the Python scripts through the TCP/IP port.
 
 **Important:** The Jupyter Notebook must run first, as it sets up and waits for TCP/IP connections initiated by MATLAB.
 
@@ -94,4 +94,4 @@ author = {Bumsoo Park and Alexandra R. Rempel and Sandipan Mishra},
 ```
 
 ## Contact
-For any questions or suggestions, please open an issue in this repository or contact me (bspark1102@gmail.com) directly.
+For any questions or suggestions, please open an issue in this repository or directly contact me (bspark1102@gmail.com).
