@@ -18,8 +18,7 @@ The following files are essential for running the simulations:
   - `BP_NN_multi2.py`: Neural network definitions and training methods.
 
 - **MATLAB Simulation Interface:**
-  - `MLEP_PG_zzzPaper_train.m`: MATLAB-EnergyPlus co-simulation setup.
-  - `MLEP_TCPIP_V6_MECC.m`: MATLAB script for managing TCP/IP communications with Python scripts.
+  - `MLEP_PG_train_main.m`: MATLAB-EnergyPlus co-simulation setup.
 
 - **Main Python Script:**
   - `PGpretrain_Paper_furthertrainTE3.ipynb`: Main Jupyter notebook for initializing and training reinforcement learning agents.
